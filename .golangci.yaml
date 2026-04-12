@@ -1,0 +1,27 @@
+version: "2"
+
+run:
+  timeout: 1m
+  concurrency: 4
+
+linters:
+  default: none
+  enable:
+    - bodyclose
+    - errname
+    - exhaustive
+    - gocritic
+    - modernize
+    - nilerr
+    - nlreturn
+    - revive
+
+formatters:
+  enable:
+    - gofumpt
+    - goimports
+  settings:
+    gofumpt:
+      lang-version: "1.26"
+    goimports:
+      local-prefixes: github.com/numberoverzero/dps-go
